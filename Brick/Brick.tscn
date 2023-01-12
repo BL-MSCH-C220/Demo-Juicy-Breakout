@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Brick/Brick.gd" type="Script" id=1]
+[ext_resource path="res://Assets/smoke0.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+min_value = -1.0
+_data = [ Vector2( 0.048718, -1 ), 0.0, 0.0, 0, 0, Vector2( 0.520513, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, -1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=7]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.5
+angular_velocity = 50.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.0
+scale_random = 0.2
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 2 )
+hue_variation_curve = SubResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 45, 15 )
+
+[node name="Brick" type="KinematicBody2D" groups=[
+"Brick",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 45, 15 )
+emitting = false
+amount = 5
+lifetime = 0.4
+one_shot = true
+process_material = SubResource( 7 )
+texture = ExtResource( 2 )
+
+[node name="Color" type="ColorRect" parent="."]
+margin_left = -45.0
+margin_top = -15.0
+margin_right = 45.0
+margin_bottom = 15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 8 )
+
+[node name="Tween" type="Tween" parent="."]

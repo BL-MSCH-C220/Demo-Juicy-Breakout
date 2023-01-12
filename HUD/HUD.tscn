@@ -1,0 +1,400 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
+
+[node name="HUD" type="Control"]
+pause_mode = 2
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 1035.0
+margin_bottom = 778.0
+color = Color( 0, 0, 0, 0.862745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu_Background" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1010.0
+margin_bottom = 510.0
+color = Color( 0.286275, 0.313726, 0.341176, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Control" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 90.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color" type="Control" parent="Menu"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 10.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Color_Paddle" type="CheckBox" parent="Menu/Color"]
+margin_right = 126.419
+margin_bottom = 26.4193
+text = "Colored Paddle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color_Ball" type="CheckBox" parent="Menu/Color"]
+margin_top = 30.0
+margin_right = 126.419
+margin_bottom = 56.4193
+text = "Colored Ball"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color_Blocks" type="CheckBox" parent="Menu/Color"]
+margin_top = 60.0
+margin_right = 126.419
+margin_bottom = 86.4193
+text = "Colored Blocks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color_Background" type="CheckBox" parent="Menu/Color"]
+margin_top = 90.0
+margin_right = 155.0
+margin_bottom = 116.419
+text = "Colored Background"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles" type="Control" parent="Menu"]
+margin_left = 10.0
+margin_top = 200.0
+margin_right = 10.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Particle_Paddle" type="CheckBox" parent="Menu/Particles"]
+text = "Particle Paddle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particle_Blocks" type="CheckBox" parent="Menu/Particles"]
+margin_top = 30.0
+margin_right = 122.0
+margin_bottom = 54.0
+text = "Particle Blocks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particle_Walls" type="CheckBox" parent="Menu/Particles"]
+margin_top = 60.0
+margin_right = 115.0
+margin_bottom = 84.0
+text = "Particle Walls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particle_Ball" type="CheckBox" parent="Menu/Particles"]
+margin_top = 90.0
+margin_right = 115.0
+margin_bottom = 114.0
+text = "Particle Ball"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blocks" type="Control" parent="Menu"]
+margin_left = 300.0
+margin_top = 10.0
+margin_right = 300.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Blocks_Appear" type="CheckBox" parent="Menu/Blocks"]
+margin_right = 136.419
+margin_bottom = 36.4193
+text = "Blocks Appear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blocks_Fall" type="CheckBox" parent="Menu/Blocks"]
+margin_top = 35.0
+margin_right = 134.0
+margin_bottom = 67.0
+text = "Blocks Fall"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blocks_Fade" type="CheckBox" parent="Menu/Blocks"]
+margin_top = 70.0
+margin_right = 157.0
+margin_bottom = 102.0
+text = "Blocks Fade"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blocks_Rotate" type="CheckBox" parent="Menu/Blocks"]
+margin_top = 110.0
+margin_right = 157.0
+margin_bottom = 142.0
+text = "Blocks Rotate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake" type="Control" parent="Menu"]
+margin_left = 300.0
+margin_top = 200.0
+margin_right = 340.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Paddle_Label" type="Label" parent="Menu/Screen_Shake"]
+margin_left = 30.0
+margin_right = 119.0
+margin_bottom = 14.0
+text = "Screen Shake Paddle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Paddle" type="HSlider" parent="Menu/Screen_Shake"]
+margin_left = 5.0
+margin_top = 20.0
+margin_right = 125.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Blocks_Label" type="Label" parent="Menu/Screen_Shake"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 161.0
+margin_bottom = 74.0
+text = "Screen Shake Blocks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Blocks" type="HSlider" parent="Menu/Screen_Shake"]
+margin_left = 5.5
+margin_top = 80.0
+margin_right = 125.5
+margin_bottom = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Walls_Label" type="Label" parent="Menu/Screen_Shake"]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 161.0
+margin_bottom = 151.0
+text = "Screen Shake Walls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen_Shake_Walls" type="HSlider" parent="Menu/Screen_Shake"]
+margin_left = 5.5
+margin_top = 140.0
+margin_right = 125.5
+margin_bottom = 156.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ball" type="Control" parent="Menu"]
+margin_left = 550.0
+margin_top = 200.0
+margin_right = 550.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Ball_Trail" type="CheckBox" parent="Menu/Ball"]
+margin_left = 10.0
+margin_right = 146.419
+margin_bottom = 36.4193
+text = "Ball Trail"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paddle" type="Control" parent="Menu"]
+margin_left = 550.0
+margin_top = 10.0
+margin_right = 550.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Paddle_Appear" type="CheckBox" parent="Menu/Paddle"]
+margin_right = 136.419
+margin_bottom = 36.4193
+text = "Paddle Appears"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paddle_Stretch" type="CheckBox" parent="Menu/Paddle"]
+margin_top = 35.0
+margin_right = 134.0
+margin_bottom = 67.0
+text = "Paddle Stretches"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="Control" parent="Menu"]
+margin_left = 800.0
+margin_top = 10.0
+margin_right = 800.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Audio_music" type="CheckBox" parent="Menu/Audio"]
+margin_right = 136.419
+margin_bottom = 36.4193
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio_effects" type="CheckBox" parent="Menu/Audio"]
+margin_top = 35.0
+margin_right = 135.0
+margin_bottom = 67.0
+text = "Sound Effects"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Effects" type="Control" parent="Menu"]
+margin_left = 800.0
+margin_top = 200.0
+margin_right = 800.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Effects_blur" type="CheckBox" parent="Menu/Effects"]
+margin_right = 136.419
+margin_bottom = 36.4193
+text = "Effects: blur"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Face" type="Control" parent="Menu"]
+margin_left = 800.0
+margin_top = 400.0
+margin_right = 840.0
+margin_bottom = 440.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Paddle_Face" type="CheckBox" parent="Menu/Face"]
+margin_right = 135.0
+margin_bottom = 32.0
+text = "Paddle Face"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="Menu"]
+margin_top = 650.0
+margin_right = 80.0
+margin_bottom = 680.0
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Menu"]
+margin_left = 700.0
+margin_top = 650.0
+margin_right = 780.0
+margin_bottom = 680.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Menu"]
+margin_left = 800.0
+margin_top = 650.0
+margin_right = 880.0
+margin_bottom = 680.0
+text = "Quit"
+
+[connection signal="toggled" from="Menu/Color/Color_Paddle" to="." method="_on_Color_Paddle_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Ball" to="." method="_on_Color_Ball_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Blocks" to="." method="_on_Color_Blocks_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Background" to="." method="_on_Color_Background_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Paddle" to="." method="_on_Particle_Paddle_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Blocks" to="." method="_on_Particle_Blocks_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Walls" to="." method="_on_Particle_Walls_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Ball" to="." method="_on_Particle_Ball_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Appear" to="." method="_on_Blocks_Appear_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Fall" to="." method="_on_Blocks_Fall_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Fade" to="." method="_on_Blocks_Fade_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Rotate" to="." method="_on_Blocks_Rotate_toggled"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Paddle" to="." method="_on_Screen_Shake_Paddle_value_changed"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Blocks" to="." method="_on_Screen_Shake_Blocks_value_changed"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Walls" to="." method="_on_Screen_Shake_Walls_value_changed"]
+[connection signal="toggled" from="Menu/Ball/Ball_Trail" to="." method="_on_Ball_Trail_toggled"]
+[connection signal="toggled" from="Menu/Paddle/Paddle_Appear" to="." method="_on_Paddle_Appear_toggled"]
+[connection signal="toggled" from="Menu/Paddle/Paddle_Stretch" to="." method="_on_Paddle_Stretch_toggled"]
+[connection signal="toggled" from="Menu/Audio/Audio_music" to="." method="_on_Audio_music_toggled"]
+[connection signal="toggled" from="Menu/Audio/Audio_effects" to="." method="_on_Audio_effects_toggled"]
+[connection signal="toggled" from="Menu/Effects/Effects_blur" to="." method="_on_Effects_blur_toggled"]
+[connection signal="toggled" from="Menu/Face/Paddle_Face" to="." method="_on_Paddle_Face_toggled"]
+[connection signal="pressed" from="Menu/Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Menu/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Menu/Quit" to="." method="_on_Quit_pressed"]
